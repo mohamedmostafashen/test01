@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Geist+Mono:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Geist+Mono:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 * {
     font-family: 'Alexandria', sans-serif;
@@ -7,182 +7,61 @@
     box-sizing: border-box;
     scroll-behavior: smooth; 
 }
-
-
-
-/* تنسيق قسم سامري */
-.experience {
-    background-color: #f9f9f9; /* خلفية فاتحة للوضع العادي */
-    padding: 50px 200px;
-    border-radius: 10px;
-    margin: 30px 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-
-
-
-
-
-
-.info-box {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.box {
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 900px;
-}
+body {
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.box h2 {
-    color: #2c3e50;
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-.box h3 {
-    color: #2980b9;
-    font-size: 20px;
-    margin-bottom: 10px;
-    text-align: right;
-}
-
-.box ul {
-    list-style-type: none;
-    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
 }
-
-.box li {
-    font-size: 18px;
-    color: #34495e;
-    margin-bottom: 8px;
-    text-align: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.experience .title {
-    text-align: center;
-    color: #3a6cf4;
-    font-size: 2.2em;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-.experience .content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.experience .card {
-    background-color: #fff;
-    width: 21.25em;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 15px;
-    transition: 0.7s ease;
-}
-
-.experience .card:hover {
-    transform: scale(1.05);
-}
-
-.experience .info {
-    text-align: center;
-}
-
-.experience .info h3 {
-    color: #3a6cf4;
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-
-
-
-
-.experience .info p {
-    color: #444;
-    font-size: 1.1em;
-    line-height: 1.8;
-}
-
-/* الوضع الليلي */
-body.dark-mode .experience {
-    background-color: #1e1e1e; /* خلفية داكنة */
-    color: #fff;
-}
-
-body.dark-mode .experience .card {
-    background-color: #2b2b2b;
-    color: #fff;
-    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode .experience .info h3 {
-    color: #4e9eff;
-}
-
-body.dark-mode .experience .info p {
-    color: #ddd;
-}
-
-
-
-
-
-
 
 header {
-    background-color: #f0f0f0;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     width: 100%;
     position: fixed;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px;
+    padding: 10px 100px;
 }
 
 .logo {
     text-decoration: none;
-    color: #3a6cf4;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.8em;
+    font-size: 1.4em;
 }
 
 .navigation a {
-    color: #3a6cf4;
     text-decoration: none;
-    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
     font-weight: 500;
     padding-left: 30px;
 }
 
 .navigation a:hover {
-    color: #601cfc;
+    color: #000000;
 }
 
 section {
@@ -190,17 +69,21 @@ section {
 }
 
 .main {
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(images/FERY1.png) no-repeat;
+    
     background-size: cover;
     background-attachment: fixed;
 }
 
 .main h2 {
-    color: #005eff;
+    color: #d8d8d8;
     font-size: 1.4em;
     font-weight: 500;
 }
@@ -208,14 +91,14 @@ section {
 .main h2 span {
     display: inline-block;
     margin-top: 10px;
-    color: #4e9eff;
-    font-size: 3em;
+    color: #ffffff;
+    font-size: 2.1em;
     font-weight: 600;
 }
 
 .main h3 {
-    color: #000000;
-    font-size: 2em;
+    color: #ffffff;
+    font-size: 1.4em;
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 10px;
@@ -224,7 +107,7 @@ section {
 
 .main-btn {
     color: #fff;
-    background-color: #3a6cf4;
+    background-color: #00aeff;
     text-decoration: none;
     font-size: 1.1em;
     font-weight: 600;
@@ -237,7 +120,7 @@ section {
 }
 
 .main-btn:hover {
-    background-color: #0a49f6;
+    background-color: #000000;
     transform: scale(1.1);
 }
 
@@ -246,17 +129,20 @@ section {
     font-size: 1.7em;
     padding-right: 30px;
 }
-
+.social-icons a:hover {
+    color: #000000;
+}
 .title {
     display: flex;
     justify-content: center;
-    color: #3a6cf4;
+    color: #ffffff;
     font-size: 2.2em;
     font-weight: 800;
     margin-bottom: 30px;
 }
 
 .content {
+    
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -278,7 +164,7 @@ section {
 }
 
 .card .icon {
-    color: #3a6cf4;
+    color: #00aeff;
     font-size: 8em;
     text-align: center;
 }
@@ -288,14 +174,18 @@ section {
 }
 
 .info h3 {
-    color: #3a6cf4;
+    color: #000000;
     font-size: 1.2em;
     font-weight: 700;
     margin: 10px;
 }
 
 .projects {
-    background-color: #ffffff;
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 
 .projects .content {
@@ -329,27 +219,30 @@ section {
     padding: 1em;
 }
 
-.project-category {
-    font-size: 0.8em;
-    color: #000;
-}
-
 .project-title {
     display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-weight: 800;
+    justify-content: center;
     margin-top: 10px;
 }
 
-.more-details {
+.project-title a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aeff;
+    color: #fff;
     text-decoration: none;
-    color: #3a6cf4;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.5s ease;
 }
 
-.more-details:hover {
-    color: #601cfc;
+.project-title a:hover {
+    background-color: #000000;
+    color: #fff;
+    transform: scale(1.1);
 }
+
+
 
 .contact .icon {
     font-size: 4.5em;
@@ -363,29 +256,43 @@ section {
     font-size: 1.5em;
 }
 
+
+
 .footer {
-    background-color: #000016;
-    color: #fff;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
 }
 
 .footer-title {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.footer-title span {
-    color: #295eff;
+.footer-title a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
-.footer .social-icons a {
-    font-size: 1.3em;
-    padding: 0 12px 0 0;
+.footer-title a:hover {
+    color: #008cff;
 }
 
-/* الوضع الليلي */
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #000000;
+}
+
 @media (max-width: 1023px) {
     header {
         padding: 12px 20px;
@@ -436,115 +343,62 @@ section {
         font-size: 10px;
     }
 }
-
-/* تعديل الوضع الليلي */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: #3a6cf4;
-    cursor: pointer;
-    margin-left: 20px;
-    transition: color 0.3s;
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.theme-toggle:hover {
-    color: #601cfc;
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
+/* شاشة الترحيب */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-body.dark-mode {
-    background-color: #000000;
-    color: #ffffff; /* نصوص الوضع الليلي باللون الأبيض */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
 }
-
-body.dark-mode header {
-    background-color: #1e1e1e;
+#welcome-screen.hide {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none; /* لمنع التفاعل */
 }
-
-body.dark-mode .card, 
-body.dark-mode .project-card {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    box-shadow: 0 5px 25px rgba(255, 255, 255, 0.1);
-}
-
-
-
-
-.workshop {
-    padding: 50px 0;
+.welcome-content {
     text-align: center;
+    color: #fff; /* لون النص */
 }
 
-.workshop .title {
+.welcome-content h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+    font-family: 'Alexandria', sans-serif; /* أو أي خط تفضله */
 }
 
-.workshop .content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+#welcome-screen button {
+    background-color: #00bcd4; /* لون الزر */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.workshop-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.workshop-card img:hover {
-    transform: scale(1.05);
-}
-
-
-
-
-
-
-
-
-
-
-body.dark-mode .footer {
-    background-color: #000000;
-}
-
-/* تغيير لون الفقرات إلى الأبيض في الوضع الليلي */
-body.dark-mode p {
-    color: #ffffff; /* لون النص الأبيض للفقرات */
-}
-
-/* في الوضع الليلي */
-body.dark-mode .main {
-    background: url('file:///D:/حلول%20الاوفيس/images/FERYDARK.PNG') no-repeat; /* الصورة في الوضع الليلي */
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-body.dark-mode .project-card {
-    background-color: #1e1e1e; /* الخلفية داكنة في الوضع الليلي */
-    border: 1px solid #444444; /* تغيير اللون المحيط بالحدود */
-    color: #ffffff; /* النص باللون الأبيض */
-}
-
-body.dark-mode .projects {
-    background-color: #000000; /* الخلفية داكنة في الوضع الليلي */
-}
-
-body.dark-mode header {
-    background-color: #000000; /* الخلفية الداكنة في الوضع الليلي */
-}
-
-
-body.dark-mode .main h3 {
-    color: #ffffff; /* اللون الأبيض في الوضع الليلي */
-}
-
-body.dark-mode .social-icons a {
-    color: #ffffff; /* اللون الأبيض في الوضع الليلي */
+#welcome-screen button:hover {
+    background-color: #008c9e; /* لون الزر عند التمرير */
 }
